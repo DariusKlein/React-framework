@@ -3,11 +3,6 @@ import Axios from "axios";
 
 import Events from "../component/Event";
 
-const data = [
-
-
-];
-
 
 class Eventslistview extends React.Component{
 
@@ -17,22 +12,20 @@ class Eventslistview extends React.Component{
     }
 
     componentDidMount() {
-        Axios.get('https://127.0.0.1:8000/api/')
+        Axios.get('http://192.168.178.4:8000/api/')
             .then(res => {
-                Events: res.data
+                this.setState({
+                    Events: res.data
+                })
+                console.log(res.data)
             });
     }
 
     render() {
         return(
-            <Events data={data}/>
-
-
+            <Events data={this.state.Events}/>
         )
-
     }
-
-
 }
 
 export default Eventslistview;

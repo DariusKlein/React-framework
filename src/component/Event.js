@@ -1,24 +1,38 @@
 import React from "react";
 
-import { List,Avatar, } from 'antd';
-
-
-
+import { List, Avatar } from 'antd';
 
 
 const Events = (props) => {
     return(
 
         <List
-            itemLayout="horizontal"
+            itemLayout="vertical"
+            size="large"
+            pagination={{
+                onChange: page => {
+                    console.log(page);
+                },
+                pageSize: 10,
+            }}
             dataSource={props.data}
             renderItem={item => (
-                <List.Item>
+                <List.Item
+                    key={item.title}
+                    extra={
+                        <img
+                            width={100}
+                            alt="logo"
+                            src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
+                        />
+                    }
+                >
                     <List.Item.Meta
-                        avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                        title={<a href="https://ant.design">{item.title}</a>}
-                        description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+                        avatar={<Avatar src={item.avatar} />}
+                        title={<a href={item.href}>{item.title}</a>}
+                        description={item.beschrijving}
                     />
+                    {item.content}
                 </List.Item>
             )}
         />
