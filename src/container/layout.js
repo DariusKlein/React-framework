@@ -1,6 +1,8 @@
-import {Col, Divider, Layout, Menu, Row} from 'antd';
+import { Col, Divider, Layout, Menu, Row} from 'antd';
 import React from "react";
 import { Button } from 'antd';
+import Eventslistview from "./Eventslistview";
+
 
 const { Header, Content, Footer } = Layout;
 
@@ -18,35 +20,35 @@ const { Header, Content, Footer } = Layout;
                         </Menu>
                     </Header>
 
-                <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
-                    <div className="site-layout-background" style={{ padding: 0 }}>
-                        <Row>
-                            <Col span={24}> <h1 className="Title" style={{fontsize:100}}> Hogeschool Utrecht Events en Gastsprekers</h1></Col>
+                    <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
+                        <div className="site-layout-background" style={{ padding: 0 }}>
+                            <Row>
+                                <Col span={24}> <h1 className="Title" style={{fontSize:40}}> Hogeschool Utrecht Events en Gastsprekers</h1></Col>
 
-                        </Row>
-                        <Divider/>
-                        <Row>
-                            <Col span={8}> <Button type="primary">Open ICT</Button></Col>
-                            <Col span={8}> <Button type="primary">ICT</Button> </Col>
-                            <Col span={8}> <Button type="primary">Andere opleidingen</Button></Col>
-                        </Row>
-                        <Divider/>
-                        <Row>
-                            <Col span={12}> <h1 className="Title" style={{fontsize:100}}> Gastsprekers</h1></Col>
-                            <Col span={12}> <h1 className="Title" style={{fontsize:100}}> Hogeschool Utrecht Events</h1></Col>
-                        </Row>
-                        <Row>
-                            <Col span={12}>
-                                {props.children}
-                            </Col>
-                            <Col span={12}>
-                                {props.children}
-                            </Col>
-                        </Row>
+                            </Row>
+                            <Divider/>
+                            <Row>
+                                <Col span={8}> <Button type="primary">Open ICT</Button></Col>
+                                <Col span={8}> <Button type="primary">ICT</Button> </Col>
+                                <Col span={8}> <Button type="primary">Andere opleidingen</Button></Col>
+                            </Row>
+                            <Divider/>
+                            <Row>
+                                <Col span={12}> <h1 className="Title" style={{fontsize:100}}> Gastsprekers</h1></Col>
+                                <Col span={12}> <h1 className="Title" style={{fontsize:100}}> Hogeschool Utrecht Events</h1></Col>
+                            </Row>
+                            <Row>
+                                <Col span={12}>
+                                    <Eventslistview/>
+                                </Col>
+                                <Col span={12}>
+                                    <Eventslistview/>
 
-                    </div>
-                </Content>
-                <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+                                </Col>
+                            </Row>
+
+                        </div>
+                    </Content>
             </Layout>
 
 
@@ -54,4 +56,4 @@ const { Header, Content, Footer } = Layout;
 
     }
 
-    export default Customlayout;
+    export { Customlayout}

@@ -4,6 +4,8 @@ import Axios from "axios";
 import Events from "../component/Event";
 
 
+
+
 class Eventslistview extends React.Component{
 
     state={
@@ -23,7 +25,7 @@ class Eventslistview extends React.Component{
 
     render() {
         return(
-            <Events data={this.state.Events}/>
+                <Events data={this.state.Events}/>
         )
     }
 }

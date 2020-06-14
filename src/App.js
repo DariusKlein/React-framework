@@ -1,20 +1,26 @@
 import React from 'react'
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
-import Eventslistview from "./container/Eventslistview";
+
+import {BrowserRouter as Router} from "react-router-dom";
 
 
 
-import Customlayout from "./container/layout";
+
+import {BaseRouter, LayoutRouter} from "./Routes";
+
+import {Customlayout} from "./container/layout";
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <Customlayout>
-
-          <Eventslistview />
-
-
-      </Customlayout>
+        <Router>
+        <LayoutRouter>
+          <BaseRouter/>
+        </LayoutRouter>
+    </Router>
     </div>
   );
 }
