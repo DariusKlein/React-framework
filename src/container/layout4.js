@@ -2,12 +2,11 @@ import { Col, Divider, Layout, Menu, Row} from 'antd';
 import React from "react";
 import { Button } from 'antd';
 import Eventslistview from "./Eventslistview";
-
+import { UserOutlined } from '@ant-design/icons';
 import { Input } from 'antd';
 import { DatePicker } from 'antd';
 import { Select } from 'antd';
-import SizeContext from "antd/es/config-provider/SizeContext";
-import {ColSize} from "antd/es/col";
+
 
 const { Option } = Select;
 
@@ -21,7 +20,7 @@ function onChange(date, dateString) {
 
 const { Search } = Input;
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
     const Customlayout4 = (props) => {
         return (
@@ -30,10 +29,13 @@ const { Header, Content, Footer } = Layout;
 
                     <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
                         <div className="logo" />
-                        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
-                            <Menu.Item key="1">Events</Menu.Item>
-                            <Menu.Item key="2">Gastsprekers</Menu.Item>
-                            <Menu.Item key="3">Placeholder</Menu.Item>
+                        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+                            <Menu.Item onClick={() => window.location.href = '/landing'} key="1">Home</Menu.Item>
+                            <Menu.Item onClick={() => window.location.href = '/Events'} key="2">Events</Menu.Item>
+                            <Menu.Item onClick={() => window.location.href = '/Events'} key="3">Gastsprekers</Menu.Item>
+                            <Menu.Item onClick={() => window.location.href = '/Admin'} key="4">Admin</Menu.Item>
+                            <Button style={{"float": "right", marginTop: 18}} href="Login" type="primary" shape="circle" icon={<UserOutlined />} />
+
                         </Menu>
                     </Header>
 

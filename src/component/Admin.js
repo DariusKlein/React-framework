@@ -17,7 +17,7 @@ import {
     VideoCameraOutlined,
     UploadOutlined,
 } from '@ant-design/icons';
-import AdminView from "../container/AdminView";
+
 const { TextArea } = Input;
 
 const { Header, Sider, Content } = Layout;
@@ -83,7 +83,7 @@ class Admin extends React.Component {
                         <Switch defaultChecked onChange={onChange2} />
                         <h1 className="18+" style={{fontSize:10}}>18+</h1>
                         <Switch defaultChecked onChange={onChange2} />
-                        <h1 className="placeholder" style={{fontSize:10}}></h1>
+                        <h1 className="placeholder" style={{fontSize:10}}>placeholder</h1>
                         <Switch defaultChecked onChange={onChange2} />
                         <Divider/>
                         <h1 className="Datepicker" style={{fontSize:10}}>Begin datum</h1>

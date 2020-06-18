@@ -8,7 +8,6 @@ import {BrowserRouter as Router} from "react-router-dom";
 
 import {BaseRouter, LayoutRouter} from "./Routes";
 
-import {Customlayout} from "./container/layout";
 
 
 

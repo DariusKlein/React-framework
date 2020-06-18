@@ -8,10 +8,11 @@ import {Customlayout4} from "./container/layout4";
 import Login from "./component/Login";
 import AdminView from "./container/AdminView";
 
+
 const BaseRouter = () => (
 <div>
     <Route Exact path='/landing' component={Eventslistview} />
-    <Route  Exact path='/login' component={Login} />
+    <Route Exact path='/login' component={Login} />
     <Route Exact path='/Admin' component={AdminView} />
     <Route Exact path='/Events' component={Customlayout4} />
     <Route Exact path='/Dev' component={Customlayout2} />
